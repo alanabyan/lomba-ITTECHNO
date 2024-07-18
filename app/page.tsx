@@ -1,12 +1,68 @@
+"use client";
+
 import Image from "next/image";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="h-[200vh] w-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#093db5] via-[#0d1447] to-[#041640]">
-      <div id="Home">
+    <div className="h-[200vh] w-full  scroll-smooth  ">
 
-      </div>
-      <div  className="text-white py-52 px-24 text-[3.2vh] ">AI Implementation in Software Development</div>
+      {/* HERO SECTION */}
+      <section id="Home" className="h-[100vh]" >
+        <video 
+        autoPlay 
+        muted 
+        loop 
+        className="rotate-180 absolute top-[-30px] z-[-1]"><source src="/blackhole.webm" type="video/webm" /></video>
+        <div  className="text-white py-52 px-24 text-[4vh] text-center font-semibold z-10 ">AI Implementation in <br/> Software <br/> Development</div>
+      </section>
+
+      {/* ABOUT SECTION */}
+      <section id="About" className="h-[100vh]">
+        <h1>a</h1>
+      </section>
+
+      {/* Card Section */}
+      <section id="Card" className="h-[100vh]">
+        <CardContainer className="inter-var">
+          <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            <CardItem
+              translateZ="50"
+              className="text-xl font-bold text-neutral-600 dark:text-white"
+            >
+              Make things float in air
+            </CardItem>
+            <CardItem
+              as="p"
+              translateZ="60"
+              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+            >
+              Hover over this card to unleash the power of CSS perspective
+            </CardItem>
+            <CardItem translateZ="100" className="w-full mt-4">
+              <Image
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                height="1000"
+                width="1000"
+                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                alt="thumbnail"
+              />
+            </CardItem>
+            <div className="flex justify-center items-center mt-20 border rounded-full">
+              <CardItem
+                translateZ={20}
+                as={Link}
+                href="https://twitter.com/mannupaaji"
+                target="__blank"
+                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+              >
+                Try now →
+              </CardItem>
+            </div>
+          </CardBody>
+        </CardContainer>
+      </section>
     </div>
   );
 }
