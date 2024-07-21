@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head />
-      <body className={`${spaceGrotesk.className} bg-[#030014] overflow-y-scroll overflow-x-hidden `}>
+      <body className={`${spaceGrotesk.className} bg-gradient-to-b from-black from-95% via-[#800be0] via-200% to-transparent overflow-y-scroll overflow-x-hidden `}>
             <Navbar />
             {children}
         </body>

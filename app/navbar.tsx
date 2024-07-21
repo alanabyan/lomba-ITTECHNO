@@ -9,9 +9,9 @@ export default function Navbar() {
                 <Link href={'https://nevtik.org'}><Image className="mx-5" src={Nevtik} alt="Logo Nevtik" width={35} height={35}/></Link>
                 <div>
                     <ul className="flex scroll-smooth">
-                        <Link href={'#Home'}><li className="text-white lg:px-5 px-2 cursor-pointer font-semibold lg:text-[1.8vh] text-[80%] hover:text-[#5E2DC8] transition duration-150 ease-in">Home</li></Link>
-                        <Link href={'#About'}><li className="text-white lg:px-5 px-2 cursor-pointer font-semibold lg:text-[1.8vh] text-[80%] hover:text-[#5E2DC8] transition duration-150 ease-in">About</li></Link>
-                        <Link href={'#Card'}><li className="text-white lg:px-5 px-2 cursor-pointer font-semibold lg:text-[1.8vh] text-[80%] hover:text-[#5E2DC8] transition duration-150 ease-in">Impact</li></Link>
+                        <Link href={'#Home'}><li className="text-white lg:px-5 px-2 cursor-pointer font-semibold lg:text-[1.8vh] text-[80%] hover:text-[#9A44FE] transition duration-150 ease-in">Home</li></Link>
+                        <Link href={'#About'}><li className="text-white lg:px-5 px-2 cursor-pointer font-semibold lg:text-[1.8vh] text-[80%] hover:text-[#9A44FE] transition duration-150 ease-in">About</li></Link>
+                        <Link href={'#Card'}><li className="text-white lg:px-5 px-2 cursor-pointer font-semibold lg:text-[1.8vh] text-[80%] hover:text-[#9A44FE] transition duration-150 ease-in">Impact</li></Link>
                     </ul>
                 </div>
             </nav>
