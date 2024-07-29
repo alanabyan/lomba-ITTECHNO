@@ -4,6 +4,11 @@ import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Link from "next/link";
 import { HoverEffect } from "@/components/ui/card-hover";
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import('@/components/Anim/Scene'), {
+  ssr: false
+})
 
 export default function Home() {
   return (
@@ -19,9 +24,11 @@ export default function Home() {
         <div  className="text-white py-52 px-24 text-[4vh] text-center font-semibold z-10 ">AI Implementation in <br/> Software <br/> Development</div>
       </section>
 
+
       {/* ABOUT SECTION */}
       <section id="About" className="h-[100vh]">
 
+        <Scene />
       </section>
 
       {/* Card Section */}
