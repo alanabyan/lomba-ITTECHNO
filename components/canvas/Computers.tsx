@@ -25,9 +25,9 @@ const Computers = ({ isMobile}) => {
       <pointLight intensity={5} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.5 : 2}
+        scale={isMobile ? 1.4 : 2}
         position={isMobile ? [0, -3, -2.2] : [0, -1.25, -1.5]}
-        rotation={[0, 0.5, 0]}
+        rotation={isMobile ? [0, 1.1, 0] :[0, 0.5, 0]}
       />
     </mesh>
   );
@@ -59,7 +59,7 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute lg:left-80 -left-8 h-full w-full ">
+    <div className="absolute lg:left-80 lg:mt-0 -left-32 -mt-64 h-full w-full ">
       <Canvas
       frameloop='demand'
       shadows
@@ -69,11 +69,15 @@ const ComputersCanvas = () => {
       className="z-[20]"
     >
       <Suspense fallback={<CanvasLoader />}>
+      {isMobile ? (
+        ''
+      ) : (
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
+      )}
         <Computers isMobile={isMobile}  />
       </Suspense>
 
