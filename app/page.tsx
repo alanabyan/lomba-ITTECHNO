@@ -1,81 +1,91 @@
 "use client";
 
-import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import Link from "next/link";
+import React from "react";
 import { HoverEffect } from "@/components/ui/card-hover";
-import dynamic from "next/dynamic";
-
-const Scene = dynamic(() => import('@/components/Anim/Scene'), {
-  ssr: false
-})
+import ComputersCanvas from "@/components/canvas/Computers";
+import AboutSection from "@/components/about/article";
+import RobotCanvas from "@/components/canvas/Robot3d/Robot";
+import Hero from "@/components/Hero/Hero";
+import AboutPage from "@/components/jda/alan";
 
 export default function Home() {
-  return (
-    <div className="h-[300vh] w-full  scroll-smooth  ">
 
+  return (
+    <div className=" w-full  scroll-smooth  ">
+   
       {/* HERO SECTION */}
-      <section id="Home" className="h-[100vh]" >
-        <video 
+      <section id="Home" >
+        <Hero />
+      </section>
+
+      {/* ABOUT SECTION */}
+      <section id="About" className="bg-black h-[100vh] -z-10">
+      {/* <video 
         autoPlay 
         muted 
         loop 
-        className="rotate-180 absolute top-[-30px] -z-10"><source src="/blackhole.webm" type="video/webm" /></video>
-        <div  className="text-white py-52 px-24 text-[4vh] text-center font-semibold z-10 ">AI Implementation in <br/> Software <br/> Development</div>
-      </section>
+        className="rotate-180 w-[80%] pl-60  items-center flex justify-center absolute z-10"><source src="/blackhole.webm" type="video/webm" /></video> */}
+        <div> 
+          <div className="absolute left-0 w-[30vw]">
 
+            <AboutSection />
+          </div>
+          <div className="w-[30vw]">
 
-      {/* ABOUT SECTION */}
-      <section id="About" className="h-[100vh]">
-
-        <Scene />
+            <ComputersCanvas data-aos="zoom-in-down" />
+          </div>
+        </div>
+        {/* <AboutPage /> */}
       </section>
 
       {/* Card Section */}
-      <section id="Card" className="">
-        <div className="max-w-5xl mx-auto px-8">
-          <HoverEffect items={projects} />
-        </div>
-      </section>
+        <section id="Card" className="bg-black h-[100vh] -z-10">
+          <div className="max-w-5xl mx-auto px-8 pt-10">
+            <HoverEffect items={projects} className="z-10" />
+          </div>
+        </section>
     </div>
   );
 }
 
 export const projects = [
   {
-    title: "Stripe",
+    title: "Fast",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "AI can write and fix code quickly.",
+    link: "https://fastapi.com",
   },
   {
-    title: "Netflix",
+    title: "Saving Time",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      "With AI we can save time in the development process",
     link: "https://netflix.com",
   },
   {
-    title: "Google",
+    title: "Troubleshoot",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "AI can detect and identify problems quickly through log data analysis and real-time system monitoring.",
+    link: "/",
   },
   {
-    title: "Meta",
+    title: "SEO Optimization",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "AI improves content for better SEO performance.",
+    link: "/",
   },
   {
-    title: "Amazon",
+    title: "Security",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "AI can detect and identify security vulnerabilities quickly through log data analysis and real-time system monitoring.",
+    link: "/",
+
   },
   {
-    title: "Microsoft",
+    title: "Data analysis",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
-  },
+      "AI can analyze data quickly through log data analysis and real-time system monitoring.",
+    link: "/",
+  }
+
+ 
 ];

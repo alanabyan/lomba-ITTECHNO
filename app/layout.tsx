@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
-import { ThemeProvider } from "@/components/theme-provider"
+import StarsCanvas from "@/components/Hero/StarsBackground";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -18,10 +18,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en" className="scroll-smooth">
       <head />
-      <body className={`${spaceGrotesk.className} bg-gradient-to-b from-[#030014] from-95% via-[#800be0] via-200% to-transparent overflow-y-scroll overflow-x-hidden `}>
+      <body className={`${spaceGrotesk.className} overflow-y-scroll overflow-x-hidden `}>
+            <StarsCanvas />
             <Navbar />
             {children}
         </body>

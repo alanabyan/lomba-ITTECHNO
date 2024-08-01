@@ -5,7 +5,7 @@ import Nevtik from "@/public/nevtik-removebg-preview (2).png"
 export default function Navbar() {
     return (
         <main className="flex justify-center">
-            <nav className=" z-20 flex fixed justify-between lg:w-[40%] w-[80%] backdrop-filter-[40px] mt-10 lg:h-[6vh] h-[5vh] backdrop-blur items-center rounded-full bg-slate-600 bg-opacity-35">
+            <nav className=" z-50 flex fixed justify-between lg:w-[40%] w-[80%] backdrop-filter-[40px] mt-10 lg:h-[6vh] h-[5vh] backdrop-blur items-center rounded-full bg-slate-600 bg-opacity-35">
                 <Link href={'https://nevtik.org'}><Image className="mx-5" src={Nevtik} alt="Logo Nevtik" width={35} height={35}/></Link>
                 <div>
                     <ul className="flex scroll-smooth">
