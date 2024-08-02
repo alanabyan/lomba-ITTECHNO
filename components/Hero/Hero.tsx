@@ -6,11 +6,11 @@ export default function Hero() {
                 <div className="absolute overflow-hidden h-[375px] w-[750px] lg:h-[375px] lg:w-[1950px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_82%,#9560EB)] top-[calc(100%-96px)]"></div>
             <div className="container">
                 <div className="flex items-center justify-center text-center">
-                    <span className="text-white font-extrabold text-[6vh] pt-40">AI Implementation in <br/> Software <br/> Development</span>
+                    <span className="text-white font-extrabold text-[4vh] lg:text-[6vh] pt-40">AI Implementation in <br/> Software <br/> Development</span>
                 </div>
-                <span className="absolute left-0">
+                {/* <span className="absolute left-0">
                     <RobotCanvas />
-                </span>
+                </span> */}
             </div>              
         </div>
     )

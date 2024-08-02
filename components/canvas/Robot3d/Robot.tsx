@@ -61,6 +61,8 @@ const RobotCanvas = () => {
   }, []);
 
   return (
+    <div className="w-full h-full">
+
       <Canvas
       frameloop='demand'
       shadows
@@ -70,16 +72,12 @@ const RobotCanvas = () => {
       className="z-20"
     >
       <Suspense fallback={<CanvasLoader />}>
-        {/* <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        /> */}
         <Computers isMobile={isMobile}  />
       </Suspense>
 
       <Preload all />
-    </Canvas>
+      </Canvas>
+    </div>
   );
 };
 

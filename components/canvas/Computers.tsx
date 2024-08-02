@@ -27,7 +27,7 @@ const Computers = ({ isMobile}) => {
         object={computer.scene}
         scale={isMobile ? 1.4 : 2}
         position={isMobile ? [0, -3, -2.2] : [0, -1.25, -1.5]}
-        rotation={isMobile ? [0, 1.1, 0] :[0, 0.5, 0]}
+        rotation={isMobile ? [-0.5, 1, 0.45] :[0, 0.5, 0]}
       />
     </mesh>
   );
@@ -38,7 +38,7 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 700px)");
 
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
@@ -59,7 +59,7 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute lg:left-80 lg:mt-0 -left-32 -mt-64 h-full w-full ">
+    <div className="absolute lg:left-80 lg:mt-0 left-[-128px] -mt-64 h-full w-full ">
       <Canvas
       frameloop='demand'
       shadows

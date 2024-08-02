@@ -7,24 +7,25 @@ import AboutSection from "@/components/about/article";
 import RobotCanvas from "@/components/canvas/Robot3d/Robot";
 import Hero from "@/components/Hero/Hero";
 import AboutPage from "@/components/jda/alan";
+import Timeline from "@/components/Timeline/timeline";
 
 export default function Home() {
 
   return (
-    <div className=" w-full  scroll-smooth  ">
+    <div className=" w-full  scroll-smooth overflow-hidden  ">
    
       {/* HERO SECTION */}
       <section id="Home" >
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        className="rotate-180 w-[40%] pl-60  items-center flex justify-center absolute left-[70vh] -z-10"><source src="/blackhole.webm" type="video/webm" /></video>
         <Hero />
       </section>
 
       {/* ABOUT SECTION */}
       <section id="About" className="bg-black h-[100vh] -z-10">
-      {/* <video 
-        autoPlay 
-        muted 
-        loop 
-        className="rotate-180 w-[80%] pl-60  items-center flex justify-center absolute z-10"><source src="/blackhole.webm" type="video/webm" /></video> */}
         <div> 
           <div className="absolute left-0 w-[30vw]">
 
@@ -32,18 +33,23 @@ export default function Home() {
           </div>
           <div className="w-[30vw]">
 
-            <ComputersCanvas data-aos="zoom-in-down" />
+            <ComputersCanvas />
           </div>
         </div>
         {/* <AboutPage /> */}
       </section>
 
       {/* Card Section */}
-        <section id="Card" className="bg-black h-[100vh] -z-10">
+        <section id="Card" className="bg-black -z-10">
           <div className="max-w-5xl mx-auto px-8 pt-10">
             <HoverEffect items={projects} className="z-10" />
           </div>
         </section>
+
+        <section className="bg-black">
+          <Timeline />
+        </section>
+
     </div>
   );
 }

@@ -71,6 +71,9 @@ export const Card = ({
         "rounded-2xl h-full w-full p-4 overflow-hidden bg-gradient-to-b from-gray-700 via-slate-800 to-zinc-700 border border-[#334155] relative z-20",
         className
       )}
+      data-aos="zoom-in-down"
+      data-aos-offset="200"
+      data-aos-delay="100"
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
