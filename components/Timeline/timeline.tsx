@@ -30,33 +30,33 @@ export default function Timeline() {
       <div
       key={index}
       className="relative max-w-[1200px] mx-auto py-40 bg-black  after:absolute after:w-[6px] after:h-full after:bg-white after:top-0 after:left-[50%] after:ml-[-3px]">
-        <div className={`py-[10px] px-[50px] relative w-[50%] bg-black bg-opacity-[0.2] ${index % 2 == 0 ? 'left-container' : 'right-container'}`}>
+        <div className={`py-[10px] lg:px-[50px] px-[20px] relative w-[50%] bg-black bg-opacity-[0.2] ${index % 2 == 0 ? 'left-container' : 'right-container'}`}>
           <div 
-          className="py-5 px-[30px] bg-white relative rounded-[6px] text-[15px]"
+          className="lg:py-5 py-3 lg:px-[30px] px-[8px] bg-white relative rounded-[6px] text-[15px]"
           data-aos="fade-up"
           >
             <div 
-            className={`lg:w-20 lg:h-20 w-11 h-11 rounded-full overflow-hidden z-10 absolute ${index % 2== 0 ? 'right-[-75px] top-[50px]' : 'left-[-75px] top-[50px]'}`}
+            className={`lg:w-20 lg:h-20 w-11 h-11 rounded-full overflow-hidden z-10 absolute  ${index % 2 == 0 ? 'lg:right-[-90px] right-[-45px] lg:top-[50px] top-[100px]' : 'lg:left-[-90px] left-[-45px] lg:top-[50px] top-[90px]'}`}
             data-aos='zoom-in-down'
             data-aos-delay='200'
             >
               <Image src={time.image} alt={time.event} width={100} height={100} className={`w-full h-full object-cover `} />
             </div>
             <h2 
-            className="text-xl font-bold "
+            className="lg:text-xl font-bold text-sm "
             data-aos='fade-up'
             data-aos-delay='600'
             >
               {time.event}
             </h2>
             <small 
-            className="font-semibold text-[1.7vh]"
+            className="font-semibold lg:text-[1.7vh] text-[1.6vh]"
             data-aos='fade-up'
             data-aos-delay='800'
             >
               {time.year}
             </small>
-            <p data-aos='fade-up' data-aos-delay='1000'>{time.description}</p>
+            <p className="text-[10px] lg:text-lg" data-aos='fade-up' data-aos-delay='1000'>{time.description}</p>
           </div>
         </div>
       </div>

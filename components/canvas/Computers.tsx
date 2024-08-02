@@ -83,6 +83,7 @@ const ComputersCanvas = () => {
 
       <Preload all />
     </Canvas>
+    <p className="text-white xl:ml-[950px] xl:-mt-36">3D Asset @Created by HyperHuman AI</p>
     </div>
     
   );
