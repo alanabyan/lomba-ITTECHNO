@@ -59,7 +59,7 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute lg:left-80 lg:mt-0 left-[-128px] -mt-64 h-full w-full ">
+    <div className="absolute lg:left-64 lg:mt-0 left-[-128px] -mt-64 h-full w-full hidden lg:block ">
       <Canvas
       frameloop='demand'
       shadows
@@ -83,7 +83,7 @@ const ComputersCanvas = () => {
 
       <Preload all />
     </Canvas>
-    <p className="text-white xl:ml-[950px] xl:-mt-36">3D Asset @Created by HyperHuman AI</p>
+    {/* <p className="text-white xl:ml-[950px] xl:-mt-36">3D Asset @Created by HyperHuman AI</p> */}
     </div>
     
   );

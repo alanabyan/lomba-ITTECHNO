@@ -29,7 +29,9 @@ export default function Timeline() {
     {events.map((time, index) => (
       <div
       key={index}
-      className="relative max-w-[1200px] mx-auto py-40 bg-black  after:absolute after:w-[6px] after:h-full after:bg-white after:top-0 after:left-[50%] after:ml-[-3px]">
+      className="relative max-w-[1200px] mx-auto py-40 bg-black top-5  after:absolute after:w-[6px] after:h-full after:bg-white after:top-0 after:left-[50%] after:ml-[-3px]">
+                
+
         <div className={`py-[10px] lg:px-[50px] px-[20px] relative w-[50%] bg-black bg-opacity-[0.2] ${index % 2 == 0 ? 'left-container' : 'right-container'}`}>
           <div 
           className="lg:py-5 py-3 lg:px-[30px] px-[8px] bg-white relative rounded-[6px] text-[15px]"
