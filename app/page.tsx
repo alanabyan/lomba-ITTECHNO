@@ -4,12 +4,10 @@ import React from "react";
 import { HoverEffect, HoverEffect2 } from "@/components/ui/card-hover";
 import ComputersCanvas from "@/components/canvas/Computers";
 import AboutSection from "@/components/about/article";
-import RobotCanvas from "@/components/canvas/Robot3d/Robot";
 import Hero from "@/components/Hero/Hero";
-import AboutPage from "@/components/jda/alan";
 import Timeline from "@/components/Timeline/timeline";
-import { describe } from "node:test";
 import Footer from "./footer";
+import { projects, respond } from "@/utils/data";
 
 export default function Home() {
   return (
@@ -74,58 +72,3 @@ export default function Home() {
     </div>
   );
 }
-
-export const projects = [
-  {
-    title: "Fast",
-    description: "AI can write and fix code quickly.",
-    link: "https://fastapi.com",
-  },
-  {
-    title: "Saving Time",
-    description: "With AI we can save time in the development process",
-    link: "https://netflix.com",
-  },
-  {
-    title: "Troubleshoot",
-    description:
-      "AI can detect and identify problems quickly through log data analysis and real-time system monitoring.",
-    link: "/",
-  },
-  {
-    title: "SEO Optimization",
-    description: "AI improves content for better SEO performance.",
-    link: "/",
-  },
-  {
-    title: "Security",
-    description:
-      "AI can detect and identify security vulnerabilities quickly through log data analysis and real-time system monitoring.",
-    link: "/",
-  },
-  {
-    title: "Data analysis",
-    description:
-      "AI can analyze data quickly through log data analysis and real-time system monitoring.",
-    link: "/",
-  },
-];
-
-export const respond = [
-  {
-    title: "Adaptation",
-    description:
-      "Adaptation is key in the AI ​​era where collaboration between artificial intelligence and humans is the greatest strength",
-    link: "/",
-  },
-  {
-    title: "back to fundamentals",
-    description: "Make AI a tool, not a replacement",
-    link: "/",
-  },
-  {
-    title: "AI as a friend",
-    description: "AI as an ally enriches our experience in creating a program",
-    link: "/",
-  },
-];
